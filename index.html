@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drawing</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <canvas></canvas>
+    <div>
+      <div id="color-box"><input id="color" type="color" /></div>
+      <div class="color-options">
+        <div
+          class="color-option"
+          style="background-color: #1abc9c"
+          data-color="#1abc9c"
+        ></div>
+        <div
+          class="color-option"
+          style="background-color: #3498db"
+          data-color="#3498db"
+        ></div>
+        <div
+          class="color-option"
+          style="background-color: #34495e"
+          data-color="#34495e"
+        ></div>
+        <div
+          class="color-option"
+          style="background-color: #27ae60"
+          data-color="#27ae60"
+        ></div>
+        <div
+          class="color-option"
+          style="background-color: #8e44ad"
+          data-color="#8e44ad"
+        ></div>
+        <div
+          class="color-option"
+          style="background-color: #f1c40f"
+          data-color="#f1c40f"
+        ></div>
+        <div
+          class="color-option"
+          style="background-color: #e74c3c"
+          data-color="#e74c3c"
+        ></div>
+
+        <div
+          class="color-option"
+          style="background-color: #d35400"
+          data-color="#d35400"
+        ></div>
+
+        <div
+          class="color-option"
+          style="background-color: #2ecc71"
+          data-color="#2ecc71"
+        ></div>
+        <div
+          class="color-option"
+          style="background-color: #e67e22"
+          data-color="#e67e22"
+        ></div>
+      </div>
+      <div class="btns">
+        <input
+          id="line-width"
+          type="range"
+          min="1"
+          max="10"
+          value="5"
+          step="0.01"
+        />
+        <button class="tool-btn" id="pencil-btn">Pen</button>
+        <button class="tool-btn" id="mode-btn">Fill</button>
+        <button class="tool-btn" id="rectangle-btn">Square</button>
+        <button class="tool-btn" id="circle-btn">Circle</button>
+        <button class="tool-btn" id="eraser-btn">Eraser</button>
+        <button class="tool-btn" id="destroy-btn">Clean</button>
+        <button class="tool-btn" id="text-btn">Text</button>
+        <label for="file" class="tool-btn"
+          >Add Photo<input type="file" accept="image/*" id="file"
+        /></label>
+        <fieldset>
+          <legend>Text</legend>
+          <div class="text-option-box">
+            <input type="number" min="1" value="75" id="fontSize" />
+            <select autocomplete="off" required id="fontType">
+              <option value="serif" style="font-family: serif">serif</option>
+              <option value="sans serif" style="font-family: sans-serif">
+                sans-serif
+              </option>
+              <option value="arial" style="font-family: arial">Arial</option>
+              <option style="font-family: verdana">veranda</option>
+              <option
+                style="
+                  font-family: 'Lucida Sans', 'Lucida Sans Regular',
+                    'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana,
+                    sans-serif;
+                "
+              >
+                Lucida Sans
+              </option>
+            </select>
+            <select autocomplete="off" required id="fontWeight">
+              <option value="normal" selected>normal</option>
+              <option value="bolder">bold</option>
+            </select>
+            <input
+              type="text"
+              placeholder="Write and then double click"
+              id="text"
+            />
+            <button id="textStyle">Fill</button>
+          </div>
+        </fieldset>
+        <button id="save">Save img</button>
+        <script src="app.js"></script>
+      </div>
+    </div>
+  </body>
+</html>
